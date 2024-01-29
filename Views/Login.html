@@ -2,30 +2,31 @@
 <html>
     <head>
         <title>Gest.Dinis</title>
-        <link rel="stylesheet" type="text/css" href="login.css">
+        <link rel="stylesheet" type="text/css" href="../wwwroot/css/login.css">
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="main">
             <input type="checkbox" id="chk" aria-hidden="true">
 
-            <div class="signup">
+            <div class="signin">
                 <form action="processar_login.php" method="post">
                     <label for="chk" aria-hidden="true">Professores</label>
-                    <input type="text" name="text" placeholder="User name" required="">
                     <input type="email" name="email" placeholder="Email" required="">
                     <input type="Password" name="pswd" placeholder="Password" required="">
-                    <a><button type="submit">Entrar</button></a>
+                    <a class="signin-button" href="../Controllers/processar_login.php"><button type="submit">Entrar</button></a>
+
+                    <div class="signin-admin_container" >  <a class="signin-admin" href="Login_Admin.html">Admin</a> </div>
                 </form>
             </div>
 
-            <div class="login">
-                
-                    <label for="chk" aria-hidden="true">Admin</label>
+            <div class="registrar">
+                <form action="processar_registar.php" method="post">
+                    <label for="chk" aria-hidden="true">Registar</label>
                     <input type="text" name="text" placeholder="User name" required="">
                     <input type="email" name="email" placeholder="Email" required="">
                     <input type="Password" name="pswd" placeholder="Password" required="">
-                    <a href="Admin.php"><button type="submit">Entrar</button></a>
+                    <a class="btn-registar" href="Admin.php"><button type="submit">Submeter</button></a>
                 </form>
             </div>
 

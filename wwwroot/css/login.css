@@ -14,7 +14,7 @@ body{
     height: 500px;
     background: red;
     overflow: hidden;
-    background: url("1.jpg") no-repeat center / cover;
+    background: url("../images/1.jpg") no-repeat center / cover;
     border-radius: 10px;
     box-shadow: 5px 20px 50px #000;  
 }
@@ -23,7 +23,7 @@ body{
    display: none;
 }
 
-.signup{
+.signin{
     position: relative;
     width: 100%;
     height: 100%;
@@ -76,7 +76,7 @@ button:hover {
 background: #6d44b8;
 }
 
-.login{
+.registrar{
     height: 460px;
     background: #eee;
     border-radius: 60% / 10%;
@@ -84,16 +84,16 @@ background: #6d44b8;
     transition: .8s ease-in-out;
 }
 
-.login label{
+.registrar label{
     color: #573b8a;
     transform: scale(.6);
 }
 
-#chk:checked ~ .login{
+#chk:checked ~ .registrar{
 transform: translateY(-500px);
 } 
 
-#chk:checked ~ .login label{
+#chk:checked ~ .registrar label{
 transform: scale(1);
 }
 
@@ -101,5 +101,18 @@ transform: scale(1);
     transform: scale(.6);
 }
 
+.btn-registar{
+    text-decoration: none;
+}
 
+.signup-button{
+    text-decoration: none;
+}
 
+.signup-admin_container {
+width:100%;
+    display: flex;
+
+}.signup-admin{
+        margin: auto;
+    }
