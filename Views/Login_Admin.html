@@ -8,6 +8,7 @@
     <title>Login_Admin</title>
     <link rel="stylesheet" href="../wwwroot/css/logadmin.css">
 
+
 </head>
 
 <body>
@@ -15,26 +16,22 @@
     <div class="login-box"> <!--Inicio da classe login-box-->
 
           <h2>Login</h2>
-            <form action="#">
+            <form action="../Controllers/processar_admin_login.php" method="post">
+
                 <div class="input-box">
-                    <input type="nome" required>
-                    <label>User_name</label>
+                    <input type="email" name="email" required />
+                    <label >Email</label>
                 </div>
                 <div class="input-box">
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <input type="password" required>
+                    <input type="password" name="pswd" required />
                     <label>Password</label>
                 </div> <!--Fim da classe login-box-->
 
                 <div class="forgot-pass"> <!--Inicio da classe forgot-pass-->
-                    <a href="#">Forgot your password?</a>
+                    <a href="#" STYLE="color: black">Forgot your password?</a>
                 </div> <!--Fim da classe forgot-pass-->
-                <button type="submit" class="btn-login-admin">Login</button><!--classe bnt-login-admin-->
-                <div class="signup-link">
-                    <a href="">Signup</a></div>
+                <input type="submit" class="btn-login-admin" value="Login">
+
             </form>
     </div>
         <span style="--i:0;"></span>
@@ -88,5 +85,7 @@
         <span style="--i:48;"></span>
         <span style="--i:49;"></span>
     </div>
+
+
 </body>
 </html>

@@ -1,65 +1,36 @@
+<?php
+session_start();
+
+
+if (isset($_SESSION["loggedUser"])) {
+
+    echo '<pre>';
+    print_r($_SESSION["loggedUser"]);
+    echo '</pre>';
+} /*else {
+
+    header("Location: login.html");
+    exit();
+}*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel do Professor</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lembre-se de criar um arquivo CSS separado para estilos -->
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0066cc;
-            font-weight: bold;
-        }
-
-        button {
-            padding: 10px;
-            background-color: #0066cc;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="../wwwroot/css/professores.css"> <!-- Lembre-se de criar um arquivo CSS separado para estilos -->
 </head>
 <body>
-<header>
-    <h1>Painel do Professor</h1>
-</header>
+<header class="header">
+    <h1>Professores</h1>
 
+    <nav class="navbar">
+        <a href="#" style="">Requisitar</a>
+        <a href="#" style="">Histórico de requisições</a>
+    </nav>
+</header>
 <section>
     <h2>Dados do Professor</h2>
     <ul>
@@ -85,6 +56,8 @@
     <button>Ver Histórico de Requisições</button>
     <!-- Adicione mais opções conforme necessário -->
 </section>
+
+
 </body>
 </html>
 

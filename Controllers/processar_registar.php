@@ -1,23 +1,50 @@
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verificar se os campos do formulário estão definidos
-    if (isset($_POST["text"]) && isset($_POST["email"]) && isset($_POST["password"])) {
-        // Capturando os dados do formulário
-        $userName = $_POST["text"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
 
-        // Adicione validações e lógica de processamento aqui
+    if (isset($_POST['email']) && isset($_POST['pswd'])) {
 
-        // Exemplo de como você pode imprimir os dados para teste
-        echo "User Name: " . $userName . "<br>";
-        echo "Email: " . $email . "<br>";
-        // Lembre-se de não exibir senhas em produção, este é apenas um exemplo
-        echo "Password: " . $password . "<br>";
+
+
+        require_once "../Models/DBConnectionProvider.php";
+
+        $pdoProvider = new DbConnectionProvider();
+        $pdo = $pdoProvider->GetPDOConnection();
+
+
+        $statement = $pdo->prepare("INSERT INTO professor (UserName, Password, Email) 
+
+                    VALUES (:username,:email,:pswd)");
+
+
+        $statement->bindParam(":email", $_POST['email']);
+        $statement->bindParam(":pswd", $_POST['pswd']);
+        $statement->bindParam(":username", $_POST['username']);
+
+//  Criar classe para ir base de dados verificar se existe parametros identicos, se não guardar esses dados
+
+
+        $result = $statement->execute();
+
+        if ($result) {
+
+            header("Location: login.html?message=registration_success");
+            exit();
+        } else {
+
+            header("Location: registro.html?message=registration_error");
+            exit();
+        }
     } else {
-        // Caso algum campo esteja ausente, exiba uma mensagem de erro
-        echo "Erro: Todos os campos do formulário devem ser preenchidos.";
+
+        header("Location: registro.html?message=missing_fields");
+        exit();
     }
+} else {
+
+    header("Location: registro.html");
+    exit();
 }
 ?>
+
 

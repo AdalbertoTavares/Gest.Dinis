@@ -10,8 +10,9 @@
 
 body {
     min-height: 100vh;
-    background: url("../images/logo.png");
-
+    background: url("../images/gest.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .header{
@@ -20,10 +21,61 @@ body {
     left: 0;
     width: 100%;
     padding: 1.3rem 10%;
-    background: red;
+    background:rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+
 }
 
+.admin{
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+
+}
+
+.navbar form{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+    justify-content: space-between;
+}
+
+footer {
+    background:rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
+    display: flex;
+   align-items: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    left: 0;
+    z-index: 100;
+
+
+}
+
+.logo {
+    width: 100px; /* Ajuste conforme necessário */
+    height: 80px;
+    margin: 4px;
+    align-items: center;
+    align-content: space-between;
+
+}
