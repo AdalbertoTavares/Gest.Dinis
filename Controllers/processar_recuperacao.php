@@ -15,15 +15,15 @@ $novaSenha = new PHPMailer();
 try {
     // Configurações do servidor SMTP
     $mail->isSMTP();
-    $mail->Host       = 'smtp.seudominio.com'; // Endereço do servidor SMTP
+    $mail->Host       = 'smtp.gmail.com'; // Endereço do servidor SMTP
     $mail->SMTPAuth   = true;                  // Habilita autenticação SMTP
-    $mail->Username   = 'seu_email@seudominio.com'; // Seu endereço de e-mail
-    $mail->Password   = 'sua_senha';           // Sua senha de e-mail
+    $mail->Username   = 'gestdinis_client_service@gmail.com'; // Seu endereço de e-mail
+    $mail->Password   = 'gest123';           // Sua senha de e-mail
     $mail->SMTPSecure = 'tls';                 // TLS ou SSL, dependendo das configurações do seu servidor
     $mail->Port       = 587;                   // Porta SMTP
 
     // Remetente e destinatário
-    $email->setFrom('seu_email@seudominio.com', 'Seu Nome');
+    $email->setFrom('gestdinis_client_service@gmail.com', 'Gest Dinis Supporte');
     $email->addAddress($email); // E-mail do destinatário
     $email->Subject = 'Recuperação de Senha';
     $email->Body    = 'Sua nova senha é: ' . $novaSenha;

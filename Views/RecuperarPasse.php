@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperação de Senha</title>
     <link rel="stylesheet" href="../wwwroot/css/recuperarpassword.css">
-
-
 </head>
 <body>
 <div class="container">

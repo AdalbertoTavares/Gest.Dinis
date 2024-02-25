@@ -17,6 +17,7 @@ body {
 
 .header{
     position: fixed;
+    height: 70px;
     top: 0;
     left: 0;
     width: 100%;
@@ -28,6 +29,18 @@ body {
     align-items: center;
     z-index: 100;
 
+}
+.admin-container{
+    position: relative;
+    top: 80px;
+    padding: 10px 0;
+}
+
+.table-header-container th:first-child{
+    border-radius: 10px 0 0 0;
+}
+.table-header-container th:last-child{
+    border-radius: 0 10px 0 0;
 }
 
 .admin{
@@ -78,4 +91,29 @@ footer {
     align-items: center;
     align-content: space-between;
 
+}
+
+.container-form-edit-reserva{
+    width: 600px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+.link-go-admin{
+    text-align: center;
+}
+.container-add-reservation{
+    background-color: white;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+.btn-add-reservation{
+    margin: 10px 0;
+}
+.btn-go-to-reservation{
+    display: block !important;
+    margin: 10px 0;
 }
