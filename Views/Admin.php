@@ -16,6 +16,8 @@ if (!isset($_SESSION['username'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../wwwroot/css/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Página do Admin</title>
 
 </head>
@@ -33,10 +35,18 @@ if (!isset($_SESSION['username'])) {
         </nav>
     </header>
 
-    <main>
-        <!-- Conteúdo principal da página de administração aqui -->
-        <p></p>
-    </main>
+    <div class="container admin-container">
+        <div class="md-3">
+            <a class="btn btn-primary btn-go-to-reservation" href="../Pages/AddReseration.php"> Fazer Reserva</a>
+        </div>
+        <?php
+            require('..\Controllers\ReservaController.php');
+            use Controllers\ReservaController;
+
+            $reservaController = new ReservaController();
+            $reservaController->GetAll();
+        ?>
+    </div>
     <footer>
 
         <img src="../wwwroot/images/rp%20(1).png" alt="Logo 1" class="logo">
@@ -45,7 +55,7 @@ if (!isset($_SESSION['username'])) {
     </footer>
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
 
 
